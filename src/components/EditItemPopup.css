@@ -1,0 +1,9 @@
+#form-editItem input{
+    width:90%;
+}
+
+#form-editItem .buttons-edit{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}

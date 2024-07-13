@@ -1,0 +1,221 @@
+
+.side-bar{
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #fff;
+    padding: 5px;
+    height: 100vh;
+    width: 250px;
+}
+
+.side-bar-li-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.side-bar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left:23px;
+    margin-top: 100px;
+}
+.side-bar li{
+    margin-top:30px;
+    color: #607992;
+    font-size: 20px;
+    cursor: pointer;
+}
+.side-bar li p:hover{
+  opacity: 60%;
+}
+.editPasswordImage{
+  position: relative;
+  bottom: 15px;
+}
+.content-container-userPanel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+     margin-left: 250px;
+     padding: 20px;
+    /* min-height: 100vh; */
+    background-color: #e9dfdf;
+     width: calc(100% - 290px);
+     overflow: auto;
+     margin-top:80px;
+}
+
+.container-header-dashboard{
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  min-width: 200px;
+  color: #bbb;
+  font-size: 30px;
+   width: calc(100% - 250px);
+}
+
+.container-header-dashboard > svg {
+  margin-top: 30px;
+}
+.rounded-div {
+    gap: 20px;
+    display: flex;
+    align-items: center;     /* Center content vertically */
+    padding: 20px;           /* Padding inside the div */
+    flex-wrap: wrap;
+}
+
+
+.stam-div{
+    color: white;
+    width: 400px;            /* Set the width of the div */
+    height: 200px;           /* Set the height of the div */
+    background-image: linear-gradient(to bottom right, #f7c56c, #f79489);
+    border: 1px solid #ccc;  /* Border with light grey color */
+    border-radius: 15px;     /* Rounded corners with a radius of 15px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+    flex: 0 1 calc(33.3333% - 20px);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+    /* if we want to center the content inside */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.blueish{
+  background-image: linear-gradient(to bottom right, #6cd9f7, #89bdf7);
+}
+.purpleish{
+  background-image: linear-gradient(to bottom right, #d66cf7, #f789f7);
+}
+.greish{
+  background-image: linear-gradient(to bottom right, #b6dee0, #61a578);
+
+}
+.greenish{
+  background-image: linear-gradient(to bottom right, #a3f78c, #7cf7a3);
+}
+.grey{
+  background-image: linear-gradient(to bottom right, #1f201f, #7c7e7c);
+}
+.stam-div-content-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.stam-div-content-flex-col{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 25px;
+}
+
+.stam-div:hover{
+  transform: scale(1.1);
+}
+.stam-div > p {
+  margin-left: 20px;
+}
+
+
+.items-container{
+    margin-top: 20px;
+    width: calc(100% - 60px);
+    padding: 20px;
+    text-align: center
+}
+.items-container h1{
+  color: rgb(88, 85, 85);
+}
+
+.items-elements{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    gap:20px
+}
+
+.items-elements img{
+  width: 200px;
+  height: 150px;
+   object-fit: fill;
+  border-radius: 20px;
+}
+
+.item-image-userPanel{ 
+    flex: 0 1 calc(33.3333% - 20px);          
+    border: 1px solid #ccc;  
+    border-radius: 15px;     
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;  
+    padding: 0 20px; 
+    /* centers the image itself */
+    display: flex;
+    justify-content: center;
+}
+
+.users-pop-up {
+  position: fixed;
+  z-index: 1000;
+  top: 100px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 80%; /* Limit the maximum height of the pop-up */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  padding: 20px; /* Add padding to ensure content isn't too close to the edges */
+  background-color: white; /* Optionally, set a background color */
+  border: 1px solid #990c0c; /* Optionally, add a border */
+}
+.all-users-flex-row{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.all-users-flex-row p {
+  margin: 0; /* Remove default margin */
+
+}
+.popUp-flexbasis{
+   flex-basis: 100px;
+}
+
+
+
+.header-allUsers{
+  gap: 30px;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.close-popUp{
+  width: 100%;
+  padding:15px ;
+}
+
+
+/* @media (min-width: 100px) and (max-width:750px){
+  .content-container-userPanel{
+    margin-left: 400px;
+  }
+  .side-bar{
+    width: 40px;
+  }
+} */

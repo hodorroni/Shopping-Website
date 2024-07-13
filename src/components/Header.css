@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(33deg, rgb(226, 238, 238) 0%, rgba(155, 179, 179, 0.411) 100% );     
+    /* display: flex;
+    align-items: center;
+    justify-content: center;     */
+  }
+
+.header{
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: rgb(28, 26, 34);
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    top:0;
+}
+
+
+.header a.logo{
+    font-size: 33px;
+    color:#f1f1f1;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* .logoPicture{
+    height: 80px;
+    position: relative;
+    top: 30px;
+} */
+
+.header .link a{
+    color: white;
+    margin-right: 50px;
+    font-size: 20px;
+    transition: font-size 0.5s ease;
+}
+
+.header .link a:hover{
+    font-size: 30px;
+}
+
+.login button{
+    padding: 8px 14px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+header .login button.signup{
+    background-color: #000;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-icon{
+    margin-right: 200px;
+    position: relative;
+}
+
+.amount-cart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 8px;
+    transform: translate(50%, -50%);
+    
+}
+
+.login button.logOut-btn{
+    color: #fff;
+    background-color: #000;
+    border-radius: 15px;
+    font-size: 22px;
+    padding: 10px 15px;
+    transition: 0.5s opacity ease;
+    margin-right: 40px;
+}
+.login-button-header{
+    color:white;
+    
+}
+
+.login button.logOut-btn:hover{
+    opacity: 70%;
+}
+
+@media (min-width: 300px) and (max-width:1050px){
+    .header{
+        height: 250px;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .cart-icon{
+        margin-right: 40px;
+        margin-bottom: 15px;
+    }
+
+}
