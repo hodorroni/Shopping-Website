@@ -1,0 +1,16 @@
+.canvas-container {
+  width: 100vw; /* Full viewport width */
+  height: 120px; /* Full viewport height or adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide overflow if needed */
+}
+
+canvas {
+  width: 100%; /* Full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+

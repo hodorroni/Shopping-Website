@@ -194,15 +194,6 @@ const NavBar = ({ setSearchItems, items }) => {
     setShowInputText(false);
   }
 
-  //handling the price pop up
-  // function handlePriceShow() {
-  //   setShowPrice(true);
-  // }
-  //handling the price pop up
-  // function handlePriceDisable() {
-  //   setShowPrice(false);
-  // }
-
   //handle categories radio
   function handleRadio(event) {
     const category = event.target.value;
@@ -251,23 +242,6 @@ const NavBar = ({ setSearchItems, items }) => {
     }
     setSearchItems(searchedArray);
   }
-
-  //handle price radio
-  // function handlePriceRadio(event) {
-  //   const price = event.target.value;
-  //   let searchedArray = [];
-  //   setSelectedPrice(price);
-  //   if (price === "<100") {
-  //     searchedArray = items.filter((value) => value.price < 100);
-  //   } else if (price === "100<x<200") {
-  //     searchedArray = items.filter(
-  //       (value) => value.price >= 100 && value.price < 200
-  //     );
-  //   } else {
-  //     searchedArray = items.filter((value) => value.price > 200);
-  //   }
-  //   setSearchItems(searchedArray);
-  // }
 
   //handling the search by the title of the items
   function handleTextChange(event) {
@@ -494,74 +468,6 @@ const NavBar = ({ setSearchItems, items }) => {
             </span>
           </a>
         </li>
-
-        {/* <li className="navbar-item flexbox-left">
-          <a className="navbar-item-inner flexbox-left">
-            <div className="navbar-item-inner-icon-wrapper flexbox">
-              <ion-icon name="pie-chart-outline"></ion-icon>
-            </div>
-            <span
-              className="link-text"
-              onMouseEnter={handlePriceShow}
-              onMouseLeave={handlePriceDisable}
-            >
-              Sort by price
-              {showPrice && (
-                <ul className="nav-link-ul">
-                  <li>
-                    <div className="navbar-categories">
-                      <input
-                        type="radio"
-                        id="<100"
-                        name="fav_language"
-                        value="<100"
-                        className="radio-electronics"
-                        onChange={handlePriceRadio}
-                        checked={selectedPriceRadio === "<100"}
-                      />
-                      <label className="electronics-label" for="html">
-                        {"<100"}
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="navbar-categories">
-                      <input
-                        type="radio"
-                        id="100<x<200"
-                        name="fav_language"
-                        value="100<x<200"
-                        className="radio-electronics"
-                        onChange={handlePriceRadio}
-                        checked={selectedPriceRadio === "100<x<200"}
-                      />
-                      <label className="electronics-label" for="html">
-                        {"100-200"}
-                      </label>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="navbar-categories">
-                      <input
-                        type="radio"
-                        id=">200"
-                        name="fav_language"
-                        value=">200"
-                        className="radio-electronics"
-                        onChange={handlePriceRadio}
-                        checked={selectedPriceRadio === ">200"}
-                      />
-                      <label className="electronics-label" for="html">
-                        {">200"}
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              )}
-            </span>
-          </a>
-        </li> */}
-
         <li onClick={handleClearAll} className="navbar-item flexbox-left">
           <a className="navbar-item-inner flexbox-left">
             <div className="navbar-item-inner-icon-wrapper flexbox">

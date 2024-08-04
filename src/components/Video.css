@@ -1,0 +1,8 @@
+.video-container {
+  margin-bottom: 200px; /* Adjust the margin value as needed */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  border-radius: 15px; /* Adjust the radius value as needed */
+}

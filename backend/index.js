@@ -210,10 +210,19 @@ app.post('/get-user-details', async(req,res) => {
 app.patch("/updateUserDetails", async (req, res) => {
     try {
         const newUser = req.body.newObject;
+        //const isStillAdmin = newUser.password === "1234"
+        const hasUserChanged = req.body.hasUserNameChanged
         const userExists = await User.findOne({username: newUser.username});
-        if(userExists){
+        if(userExists && !hasUserChanged){
             return res.status(400).json({message: "Username already exists"});
         }
+        // if(!isStillAdmin){
+        //     newUser.isAdmin = true
+        // }
+        // else {
+        //     newUser.isAdmin = false
+        // }
+
         const result = await User.findOneAndUpdate({ _id: newUser._id }, newUser, { new: true, runValidators: true });
         // Check if result is falsy or if result.ok is not truthy
         if (!result) {

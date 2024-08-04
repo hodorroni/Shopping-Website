@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Cart.css"; // Import the CSS file
 import Cart2 from "./Cart2.jsx";
 import Header from "./Header.jsx";
+import AnimatedCanvas from "./AnimatedCanvas.jsx";
 const Cart = ({ cartItems, removeFromCart, isLogged, handleLogOut }) => {
   const [totalToPay, setTotal] = useState(0);
 
@@ -61,6 +62,8 @@ const Cart = ({ cartItems, removeFromCart, isLogged, handleLogOut }) => {
           <h1>Total to pay: {formatPrice(totalToPay)}₪</h1>
         </>
       )}
+
+      <AnimatedCanvas />
     </>
   );
 };

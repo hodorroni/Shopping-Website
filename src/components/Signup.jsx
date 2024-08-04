@@ -50,14 +50,7 @@ export default function Signup({ isLoggedIn, setLogin }) {
     return () => clearInterval(interval);
   }, [passwordValue]);
 
-  // function handleAdminPass(event) {
-  //   setAdminPass(event.target.value);
-  // }
-
   function handleSubmit(event) {
-    // if (passwordValue === "1234") {
-    //   setAdminPass(true);
-    // }
     event.preventDefault();
     fetch("http://localhost:5000/add-user", {
       method: "POST",
@@ -150,17 +143,6 @@ export default function Signup({ isLoggedIn, setLogin }) {
             onChange={handleLastname}
           />
         </p>
-        {/* <p className="admin-section">
-          <label htmlFor="adminPassword">Admin Password:</label>
-          <input
-            type="text"
-            id="adminPassword"
-            name="adminPassword"
-            value={adminPasswordVal}
-            onChange={handleAdminPass}
-          />
-        </p> */}
-
         {isLoggedIn && (
           <p>
             <h2 className="success-login">
@@ -179,8 +161,6 @@ export default function Signup({ isLoggedIn, setLogin }) {
           Sign Up
         </button>
       </form>
-      {/* {result && <div>Result: {JSON.stringify(result)}</div>}
-      {error && <div>Error: {error}</div>} */}
     </>
   );
 }

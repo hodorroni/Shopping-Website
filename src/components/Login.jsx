@@ -6,7 +6,6 @@ export default function Login({ isLoggedIn, setLogin }) {
   const [passwordValue, setPassword] = useState("");
   const [result, setResult] = useState(null);
   const [errorMessage, setError] = useState(null);
-  //   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -68,7 +67,6 @@ export default function Login({ isLoggedIn, setLogin }) {
 
   return (
     <>
-      {/* {!isLoggedIn && ( */}
       <>
         <div className="background-login">
           <div className="shape-login"></div>
@@ -117,14 +115,6 @@ export default function Login({ isLoggedIn, setLogin }) {
           </button>
         </form>
       </>
-      {/* )} */}
-
-      {/* {isLoggedIn && result && (
-        <div>
-          <p>Logged in as user with ID: {result.userId}</p>
-        </div>
-      )}
-      {error && <p>Error: {error}</p>} */}
     </>
   );
 }

@@ -78,24 +78,21 @@ function App() {
   //checking if the user still logged in, if so get the userId and the isLoggedIn from the localStorage
   useEffect(() => {
     //checking if the user still logged in from the localStorage of the user
-    const loggedInUser = localStorage.getItem("isLoggedIn");
+    const loggedInUser = JSON.parse(localStorage.getItem("isLoggedIn"));
     const storedUserId = localStorage.getItem("userId");
     const userLoggedTime = localStorage.getItem("timeUserloggedIn");
     const oneHourSessionDuration = 3600000;
     const currentTime = Date.now();
     if (currentTime - userLoggedTime <= oneHourSessionDuration) {
       if (loggedInUser && storedUserId) {
-        setLogginIn(true);
-        setUserId(storedUserId);
+        handleLogIn(storedUserId, true);
       } else {
-        setLogginIn(false);
-        setUserId(null);
+        handleLogIn(null, false);
       }
     }
     //if 1 hour has passed simply log out the user
     else {
-      setLogginIn(false);
-      setUserId(null);
+      handleLogIn(null, false);
     }
   }, []);
 
@@ -231,10 +228,6 @@ function App() {
           />
         </Routes>
       </Router>
-      {/* <div className="App">
-        <NavBar setSearchItems={setSearchItems} items={items} />
-        <main id="main" className="flexbox-col"></main>
-      </div> */}
     </>
   );
 }
